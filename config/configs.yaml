@@ -1,0 +1,16 @@
+routes:
+  - path: /api/service-a
+    target: http://localhost:8001
+    rateLimit: 10
+    authRequired: false
+  - path: /api/service-b
+    target: http://localhost:8002
+    rateLimit: 10
+    authRequired: false
+
+server:
+  host: localhost
+  port: 8000
+
+logging:
+  level: info
