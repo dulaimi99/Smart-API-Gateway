@@ -2,13 +2,13 @@ package router
 
 import (
 	"net/http"
-	"smart-api-gateway/config"
 	"smart-api-gateway/handler"
+	"smart-api-gateway/utils"
 
 	"github.com/sirupsen/logrus"
 )
 
-func NewRouter(cfg *config.Config, logger *logrus.Logger) http.Handler {
+func NewRouter(cfg *utils.Config, logger *logrus.Logger) http.Handler {
 	logger.Info("Starting router setup")
 
 	mux := http.NewServeMux()

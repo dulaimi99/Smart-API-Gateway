@@ -4,14 +4,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"smart-api-gateway/config"
 	"smart-api-gateway/router"
 	"smart-api-gateway/utils"
 )
 
 func main() {
 
-	cfg, err := config.LoadConfig()
+	cfg, err := utils.LoadConfig()
 	if err != nil {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}

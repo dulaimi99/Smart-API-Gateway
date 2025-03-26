@@ -3,12 +3,11 @@ package utils
 import (
 	"io"
 	"os"
-	"smart-api-gateway/config"
 
 	"github.com/sirupsen/logrus"
 )
 
-func NewLogger(cfg *config.Config) *logrus.Logger {
+func NewLogger(cfg *Config) *logrus.Logger {
 	Log := logrus.New()
 	Log.SetFormatter(&logrus.TextFormatter{FullTimestamp: true})
 
