@@ -1,11 +1,13 @@
 routes:
   - path: /api/service-a
     target: http://localhost:8001
-    rateLimit: 10
+    refillRate: 1
+    capacity: 10
     authRequired: false
   - path: /api/service-b
     target: http://localhost:8002
-    rateLimit: 10
+    refillRate: 1
+    capacity: 10
     authRequired: false
 
 server:

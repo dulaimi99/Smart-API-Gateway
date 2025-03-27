@@ -9,17 +9,18 @@ import (
 // Config holds the configuration for the API Gateway.
 type Config struct {
 	Server struct {
-		Host string `yaml:"host"` // e.g., "0.0.0.0"
-		Port int    `yaml:"port"` // e.g., 8080
+		Host string `yaml:"host"`
+		Port int    `yaml:"port"`
 	} `yaml:"server"`
 	Routes []struct {
-		Path         string `yaml:"path"`         // e.g., "/api/v1"
-		Target       string `yaml:"target"`       // e.g., "http://backend-service"
-		RateLimit    int    `yaml:"rateLimit"`    // e.g., 100
-		AuthRequired bool   `yaml:"authRequired"` // e.g., true
+		Path         string `yaml:"path"` // e.g., "/api/v1"
+		Target       string `yaml:"target"`
+		RefillRate   int    `yaml:"refillRate"`
+		Capacity     int    `yaml:"capacity"`
+		AuthRequired bool   `yaml:"authRequired"`
 	} `yaml:"routes"`
 	Logging struct {
-		Level string `yaml:"level"` // e.g., "info", "debug"
+		Level string `yaml:"level"`
 	} `yaml:"logging"`
 }
 
